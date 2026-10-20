@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account — KITE</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Hanken+Grotesk:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KITE home">
+        <svg class="logo-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1.5 L20 9 L11 24.5 L2 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 1.5 V24.5 M2 9 H20" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo-word">KITE</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="index.html"><span class="badge-new">new</span>KITE OS</a>
+        <a class="nav-link" href="index.html#pocket">k1</a>
+        <a class="nav-link" href="index.html#memory">memory</a>
+        <a class="nav-link" href="index.html#anywhere">anywhere</a>
+        <a class="nav-link" href="index.html#models">models</a>
+        <a class="nav-link" href="index.html#faq">support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-account" href="signin.html" data-keep-label>sign in</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html"><span><span class="badge-new">new</span>KITE OS</span></a>
+    <a href="index.html#pocket"><span>k1</span></a>
+    <a href="index.html#memory"><span>memory</span></a>
+    <a href="index.html#anywhere"><span>anywhere</span></a>
+    <a href="index.html#models"><span>models</span></a>
+    <a href="index.html#faq"><span>support</span></a>
+    <a class="mobile-account" href="signin.html" data-keep-label><span>sign in</span></a>
+  </nav>
+
+  <main class="auth-main" id="main">
+    <aside class="auth-aside">
+      <div>
+        <h1 class="auth-aside-title">start with the idea.</h1>
+        <p class="auth-aside-text">create an account to use the KITE OS workspace. we'll email you a link to confirm your address.</p>
+      </div>
+      <div class="auth-art"><img src="assets/workspace.svg" alt="the KITE OS workspace working through a task" width="1200" height="755"></div>
+      <ul class="auth-perks">
+        <li>say what you want to make, find or finish</li>
+        <li>KITE works through the steps and checks in with you</li>
+      </ul>
+    </aside>
+
+    <section class="auth-panel" aria-labelledby="signup-title">
+      <div class="auth-card">
+        <p class="auth-eyebrow">KITE account</p>
+        <h2 class="auth-title" id="signup-title">create account</h2>
+        <p class="auth-sub">already have one? <a href="signin.html">sign in</a></p>
+
+        <div class="demo-banner" role="note">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17Zm.9 12.6H9.1V8.9h1.8v5.2Zm0-6.6H9.1V5.8h1.8v1.7Z"/></svg>
+          <span><strong>one more step after this.</strong> we'll send a confirmation link to your email. click it, then sign in.</span>
+        </div>
+
+        <div class="alert" role="alert" data-alert></div>
+
+        <form class="form" id="signup-form" novalidate>
+          <div class="field">
+            <label class="label" for="name">full name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace" aria-describedby="name-error" required>
+            <p class="field-error" id="name-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="email">email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-error" required>
+            <p class="field-error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">password</label>
+            <div class="input-wrap">
+              <input class="input has-toggle" id="password" name="password" type="password" autocomplete="new-password" placeholder="at least 8 characters" aria-describedby="password-hint password-error" required>
+              <button class="toggle-pw" type="button" aria-controls="password confirm" aria-pressed="false" data-toggle-password>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>show</span>
+              </button>
+            </div>
+            <div class="strength" data-strength data-score="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <p class="field-hint" id="password-hint" data-strength-label>use 8+ characters with at least one letter and one number.</p>
+            <p class="field-error" id="password-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="confirm">confirm password</label>
+            <input class="input" id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="type it again" aria-describedby="confirm-error" required>
+            <p class="field-error" id="confirm-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="check"><input type="checkbox" name="terms" id="terms" aria-describedby="terms-error"> <span>I agree to the <a class="inline-link" href="legal.html#terms" target="_blank" rel="noopener">terms</a> and <a class="inline-link" href="legal.html#privacy" target="_blank" rel="noopener">privacy policy</a> of this demo.</span></label>
+            <p class="field-error" id="terms-error"></p>
+          </div>
+
+          <button class="btn-submit" type="submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span data-submit-label>create account</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="auth-switch">already have an account? <a href="signin.html">sign in</a></p>
+        <p class="auth-back"><a href="index.html">← back to KITE home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a class="glow-text" href="legal.html#support" aria-label="Community and support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v10H9l-5 4V5Z"/></svg></a>
+    </div>
+    <hr>
+    <div class="footer-links">
+      <a class="glow-text" href="legal.html#track">track my k1 order</a>
+      <a class="glow-text" href="legal.html#terms">terms</a>
+      <a class="glow-text" href="legal.html#privacy">privacy policy</a>
+      <a class="glow-text" href="legal.html#warranty">warranty &amp; return</a>
+    </div>
+    <hr>
+    <div>KITE inc. © <span data-year>2026</span> · demo project</div>
+  </footer>
+
+  <div class="toast-wrap" aria-live="polite" data-toasts></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
