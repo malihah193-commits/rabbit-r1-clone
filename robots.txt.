@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rabbit-r1-clone.vercel.app/sitemap.xml
+
