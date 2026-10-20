@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help &amp; legal — KITE</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Hanken+Grotesk:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KITE home">
+        <svg class="logo-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1.5 L20 9 L11 24.5 L2 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 1.5 V24.5 M2 9 H20" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo-word">KITE</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="index.html"><span class="badge-new">new</span>KITE OS</a>
+        <a class="nav-link" href="index.html#pocket">k1</a>
+        <a class="nav-link" href="index.html#memory">memory</a>
+        <a class="nav-link" href="index.html#anywhere">anywhere</a>
+        <a class="nav-link" href="index.html#models">models</a>
+        <a class="nav-link" href="#support">support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-account" href="signin.html">sign in</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html"><span><span class="badge-new">new</span>KITE OS</span></a>
+    <a href="index.html#pocket"><span>k1</span></a>
+    <a href="index.html#memory"><span>memory</span></a>
+    <a href="index.html#anywhere"><span>anywhere</span></a>
+    <a href="index.html#models"><span>models</span></a>
+    <a href="#support"><span>support</span></a>
+    <a class="mobile-account" href="signin.html"><span>sign in</span></a>
+  </nav>
+
+  <main class="doc-main" id="main">
+    <div class="doc-wrap">
+      <h1 class="doc-title">help &amp; legal.</h1>
+      <p class="body-lg" style="margin-top:18px">KITE is a fictional brand built for a website design demo. the pages below explain how this demo works. they are not real legal agreements.</p>
+      <nav class="doc-nav" aria-label="On this page">
+        <a href="#support">support</a>
+        <a href="#track">track my order</a>
+        <a href="#terms">terms</a>
+        <a href="#privacy">privacy</a>
+        <a href="#warranty">warranty &amp; return</a>
+      </nav>
+
+      <section class="doc-section" id="support">
+        <h2>support</h2>
+        <p>most questions are answered in the <a class="inline-link" href="index.html#faq">KITE OS FAQ</a>. for this demo:</p>
+        <ul>
+          <li>create an account on the <a class="inline-link" href="signup.html">sign-up page</a>. you'll get an email to confirm your address, then you can <a class="inline-link" href="signin.html">sign in</a>.</li>
+          <li>your <a class="inline-link" href="account.html">workspace</a> runs a simulated task. it isn't connected to any AI yet.</li>
+          <li>password reset, email verification and checkout are simulated and do not send or charge anything.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section" id="track">
+        <h2>track my k1 order</h2>
+        <p>enter any order number to see how tracking would look. no real orders exist.</p>
+        <form class="track-form" data-track>
+          <label class="sr-only" for="order">order number</label>
+          <input class="input" id="order" name="order" placeholder="e.g. KT-10482" autocomplete="off">
+          <button class="btn btn-primary" type="submit">track</button>
+        </form>
+        <p class="track-result" data-track-result aria-live="polite"></p>
+      </section>
+
+      <section class="doc-section" id="terms">
+        <h2>terms</h2>
+        <p>this website is a non-commercial demonstration of front-end design. nothing on it is an offer to sell. by using the demo you agree not to enter real passwords or personal data you wouldn't want stored in your own browser.</p>
+      </section>
+
+      <section class="doc-section" id="privacy">
+        <h2>privacy policy</h2>
+        <p>accounts are stored with Supabase (name, email and a securely hashed password). while you use the site, your browser keeps:</p>
+        <ul>
+          <li>your sign-in session in local storage, until you sign out.</li>
+          <li>the contents of the demo cart in local storage.</li>
+        </ul>
+        <p>fonts are loaded from Google Fonts; if they can't load, system fonts are used instead.</p>
+      </section>
+
+      <section class="doc-section" id="warranty">
+        <h2>warranty &amp; return</h2>
+        <p>k1 is a fictional device, so there is nothing to return. in a real store this section would cover the warranty period, how to start a return and refund timing.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a class="glow-text" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (opens x.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></a>
+      <a class="glow-text" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens instagram.com)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    </div>
+    <hr>
+    <div class="footer-links">
+      <a class="glow-text" href="#track">track my k1 order</a>
+      <a class="glow-text" href="#terms">terms</a>
+      <a class="glow-text" href="#privacy">privacy policy</a>
+      <a class="glow-text" href="#warranty">warranty &amp; return</a>
+    </div>
+    <hr>
+    <div>KITE inc. © <span data-year>2026</span> · demo project</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script>
+    document.querySelector("[data-track]").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var value = this.order.value.trim();
+      var out = document.querySelector("[data-track-result]");
+      out.textContent = value
+        ? "order " + value.toUpperCase() + ": demo order — packed, shipping soon. (this is sample data; no real order exists.)"
+        : "please enter an order number.";
+    });
+  </script>
+</body>
+</html>

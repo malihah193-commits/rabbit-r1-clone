@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your workspace — KITE</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Hanken+Grotesk:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="is-auth-pending">
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KITE home">
+        <svg class="logo-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1.5 L20 9 L11 24.5 L2 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 1.5 V24.5 M2 9 H20" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo-word">KITE</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="index.html"><span class="badge-new">new</span>KITE OS</a>
+        <a class="nav-link" href="index.html#pocket">k1</a>
+        <a class="nav-link" href="index.html#memory">memory</a>
+        <a class="nav-link" href="index.html#anywhere">anywhere</a>
+        <a class="nav-link" href="index.html#models">models</a>
+        <a class="nav-link" href="index.html#faq">support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-account" href="signin.html">sign in</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html"><span><span class="badge-new">new</span>KITE OS</span></a>
+    <a href="index.html#pocket"><span>k1</span></a>
+    <a href="index.html#memory"><span>memory</span></a>
+    <a href="index.html#anywhere"><span>anywhere</span></a>
+    <a href="index.html#models"><span>models</span></a>
+    <a href="index.html#faq"><span>support</span></a>
+    <a class="mobile-account" href="signin.html"><span>sign in</span></a>
+  </nav>
+
+  <main class="account-main" id="main" data-account-page>
+    <div class="account-wrap">
+      <div class="account-head reveal-group">
+        <div>
+          <span class="status-pill is-live reveal" style="--i:0"><i></i> signed in</span>
+          <h1 class="account-hello reveal" style="--i:1">hi, <span data-user-first>there</span>.</h1>
+          <p class="account-lede reveal" style="--i:2">this is your KITE OS workspace. type a thought below and watch KITE plan it out. the task runner is still a simulation.</p>
+        </div>
+        <div class="account-actions reveal" style="--i:3">
+          <a class="btn btn-ghost" href="index.html">← back to home</a>
+          <button class="btn btn-primary" type="button" data-signout>sign out</button>
+        </div>
+      </div>
+
+      <div class="account-grid">
+        <section class="card glow-card" aria-labelledby="ws-title">
+          <h2 class="card-title" id="ws-title">new thought</h2>
+          <p class="card-sub">a simulated run. KITE OS isn't connected to any real AI yet.</p>
+          <form class="composer" data-composer>
+            <label class="sr-only" for="thought">what do you want to make, find or finish?</label>
+            <input class="input" id="thought" name="thought" type="text" placeholder="say what you want to make, find or finish" autocomplete="off">
+            <button class="btn btn-primary" type="submit">run</button>
+          </form>
+          <div class="suggestions">
+            <button type="button" data-suggest>plan a weekend in lisbon</button>
+            <button type="button" data-suggest>sort my downloads folder</button>
+            <button type="button" data-suggest>compare three laptops under $1,200</button>
+          </div>
+          <div class="run" data-run aria-live="polite"></div>
+        </section>
+
+        <aside class="card" aria-labelledby="acct-title">
+          <h2 class="card-title" id="acct-title">your account</h2>
+          <dl class="details">
+            <div><dt>name</dt><dd data-user-name>—</dd></div>
+            <div><dt>email</dt><dd data-user-email>—</dd></div>
+            <div><dt>member since</dt><dd data-user-since>—</dd></div>
+            <div><dt>status</dt><dd data-user-status>—</dd></div>
+          </dl>
+          <p class="demo-note">your account is managed by Supabase. signing out ends your session on this device.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a class="glow-text" href="legal.html#support" aria-label="Community and support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v10H9l-5 4V5Z"/></svg></a>
+    </div>
+    <hr>
+    <div class="footer-links">
+      <a class="glow-text" href="legal.html#track">track my k1 order</a>
+      <a class="glow-text" href="legal.html#terms">terms</a>
+      <a class="glow-text" href="legal.html#privacy">privacy policy</a>
+      <a class="glow-text" href="legal.html#warranty">warranty &amp; return</a>
+    </div>
+    <hr>
+    <div>KITE inc. © <span data-year>2026</span> · demo project</div>
+  </footer>
+
+  <div class="toast-wrap" aria-live="polite" data-toasts></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

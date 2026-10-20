@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KITE OS — start with the idea</title>
+  <meta name="description" content="KITE OS: say what you want to make, find or finish, and let it work through the steps for you.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Hanken+Grotesk:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KITE home">
+        <svg class="logo-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1.5 L20 9 L11 24.5 L2 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 1.5 V24.5 M2 9 H20" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo-word">KITE</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="#top"><span class="badge-new">new</span>KITE OS</a>
+        <a class="nav-link" href="#pocket">k1</a>
+        <a class="nav-link" href="#memory">memory</a>
+        <a class="nav-link" href="#anywhere">anywhere</a>
+        <a class="nav-link" href="#models">models</a>
+        <a class="nav-link" href="#faq">support</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-account" href="signin.html">sign in</a>
+        <button class="icon-btn" type="button" data-open-modal="cart" aria-label="View cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 7h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 7Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="#top"><span><span class="badge-new">new</span>KITE OS</span></a>
+    <a href="#pocket"><span>k1</span></a>
+    <a href="#memory"><span>memory</span></a>
+    <a href="#anywhere"><span>anywhere</span></a>
+    <a href="#models"><span>models</span></a>
+    <a href="#faq"><span>support</span></a>
+    <a class="mobile-account" href="signin.html"><span>sign in</span></a>
+  </nav>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="assets/hero-poster.svg" alt="" width="1600" height="900" fetchpriority="high">
+        <button class="hero-play" type="button" data-open-modal="film" aria-label="Play: the KITE OS launch film">
+          <span class="play-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span>
+        </button>
+      </div>
+
+      <div class="hero-copy reveal-group">
+        <h1 class="hero-title reveal" id="hero-title" style="--i:0">KITE OS</h1>
+        <p class="hero-tagline reveal" style="--i:1">start with the idea.</p>
+        <p class="hero-lede reveal" style="--i:2">tell it what you want to make, find or finish. KITE OS takes care of the steps in between, so you can stay on the part that matters.</p>
+        <a class="pill hero-cta reveal" style="--i:3" href="account.html">
+          <span>try KITE OS</span>
+          <svg class="pill-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg>
+        </a>
+
+        <div class="platforms reveal" style="--i:4">
+          <div class="platform glow-card">
+            <span class="platform-name">web</span>
+            <span class="platform-note">nothing to install</span>
+            <span class="platform-links"><a href="account.html">open KITE OS</a></span>
+          </div>
+          <div class="platform glow-card">
+            <span class="platform-name">macOS</span>
+            <span class="platform-note">Apple silicon and Intel</span>
+            <span class="platform-links"><button type="button" data-open-modal="download" data-platform="macOS (universal)">download <small>214 MB</small></button></span>
+          </div>
+          <div class="platform glow-card">
+            <span class="platform-name">Windows</span>
+            <span class="platform-note">pick the build your PC runs</span>
+            <span class="platform-links">
+              <button type="button" data-open-modal="download" data-platform="Windows x64">x64 <small>98 MB</small></button>
+              <button type="button" data-open-modal="download" data-platform="Windows ARM">ARM <small>104 MB</small></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 1. OPERATE ================= -->
+    <section class="section" id="operate" aria-labelledby="operate-title">
+      <div class="container reveal-group">
+        <div class="split">
+          <div class="split-head"><h2 class="section-title reveal" id="operate-title" style="--i:0">the operating system that operates itself.</h2></div>
+          <div class="split-body">
+            <p class="body-lg reveal" style="--i:1">you wanted an outcome. instead, you learned the software. open the app. find the menu. copy this. paste that. repeat.</p>
+            <p class="body-lg reveal" style="--i:2">KITE OS begins with the outcome. share what you have in mind, even if it's only half an idea. it handles the steps and checks in only when a choice is truly yours.</p>
+          </div>
+        </div>
+        <dl class="points">
+          <div class="point reveal" style="--i:3"><dt>an idea on the commute</dt><dd>send KITE the task from your phone and let it start on your connected computer before you're back at your desk.</dd></div>
+          <div class="point reveal" style="--i:4"><dt>research that's ready to use</dt><dd>turn a dozen open tabs into a clean comparison or a finished slide deck. not one more pile of links.</dd></div>
+          <div class="point reveal" style="--i:5"><dt>the folder you keep avoiding</dt><dd>let KITE sort, rename and file everything on your connected computer in one pass, instead of one file at a time.</dd></div>
+        </dl>
+        <figure class="figure reveal" style="--i:6">
+          <img src="assets/workspace.svg" alt="the KITE OS workspace: one conversation working through an expense report step by step" width="1200" height="755" loading="lazy">
+        </figure>
+        <p class="closer reveal" style="--i:7">the computer stops being something you operate. it becomes something you direct.</p>
+      </div>
+    </section>
+
+    <!-- ================= 2. MEMORY ================= -->
+    <section class="section" id="memory" aria-labelledby="memory-title">
+      <div class="container reveal-group">
+        <div class="split">
+          <div class="split-head"><h2 class="section-title reveal" id="memory-title" style="--i:0">pick up where you left off.</h2></div>
+          <div class="split-body">
+            <p class="body-lg reveal" style="--i:1">your next request shouldn't need a full recap.</p>
+            <p class="body-lg reveal" style="--i:2">KITE OS keeps memory and context around your work. add what matters, correct what changes, and spend your time moving forward instead of re-explaining the setup.</p>
+            <p class="body-lg reveal" style="--i:3">you don't have to watch, either. start a long task, close the tab, and KITE keeps going while you do something else.</p>
+          </div>
+        </div>
+        <dl class="points">
+          <div class="point reveal" style="--i:4"><dt>less starting over</dt><dd>preferences and context you've shared carry into the next request. you're continuing a conversation, not beginning from zero.</dd></div>
+          <div class="point reveal" style="--i:5"><dt>less waiting around</dt><dd>hand off a long job without keeping its window open. come back to finished work instead of staying to watch it happen.</dd></div>
+          <div class="point reveal" style="--i:6"><dt>more you can hand off</dt><dd>add compatible skills for the jobs you want KITE to take on, rather than building every useful routine yourself.</dd></div>
+        </dl>
+        <figure class="figure is-bleed reveal" style="--i:7">
+          <img src="assets/laptop.svg" alt="KITE OS on a laptop, continuing a long task in the background" width="1600" height="900" loading="lazy">
+        </figure>
+        <p class="closer reveal" style="--i:8">you move on. the work keeps moving.</p>
+      </div>
+    </section>
+
+    <!-- ================= 3. ANYWHERE ================= -->
+    <section class="section" id="anywhere" aria-labelledby="anywhere-title">
+      <div class="container reveal-group">
+        <div class="split">
+          <div class="split-head"><h2 class="section-title reveal" id="anywhere-title" style="--i:0">your AI shouldn't live in one app.</h2></div>
+          <div class="split-body">
+            <p class="body-lg reveal" style="--i:1">an answer in a chat window isn't a finished job. not when the files, tools and next steps live somewhere else.</p>
+            <p class="body-lg reveal" style="--i:2">KITE OS works where the task is. reach it on the web, in your messaging apps or on k1, and let it act on the computers you choose to connect.</p>
+          </div>
+        </div>
+        <dl class="points">
+          <div class="point reveal" style="--i:3"><dt>wherever you are</dt><dd>start from a browser, a message or a button press. the same KITE, the same memory, wherever you happen to be.</dd></div>
+          <div class="point reveal" style="--i:4"><dt>where your work already lives</dt><dd>connect your own computers so KITE can open, edit and organise files right where they are kept.</dd></div>
+          <div class="point reveal" style="--i:5"><dt>through your software, too</dt><dd>when there's no shortcut, KITE can work through the apps you already use, the same way you would.</dd></div>
+        </dl>
+        <figure class="figure is-bleed reveal" style="--i:6">
+          <img src="assets/devices.svg" alt="three connected computers and a KITE k1, all linked to KITE OS" width="1600" height="900" loading="lazy">
+        </figure>
+        <p class="closer reveal" style="--i:7">one assistant. every place you work.</p>
+      </div>
+    </section>
+
+    <!-- ================= 4. MODELS ================= -->
+    <section class="section" id="models" aria-labelledby="models-title">
+      <div class="container reveal-group">
+        <div class="split">
+          <div class="split-head"><h2 class="section-title reveal" id="models-title" style="--i:0">switch the AI. keep what makes it yours.</h2></div>
+          <div class="split-body">
+            <p class="body-lg reveal" style="--i:1">models improve every few months. your setup shouldn't have to start over every time they do.</p>
+            <p class="body-lg reveal" style="--i:2">bring your own API key and choose what powers KITE OS. your memory, skills and connected computers stay exactly where they are.</p>
+          </div>
+        </div>
+        <p class="closer reveal" style="--i:3">keep what you've built. bring your own key.</p>
+      </div>
+    </section>
+
+    <section class="marquee-section" aria-label="model providers KITE OS can run on">
+      <div class="marquee" aria-hidden="true">
+        <div class="provider-row" data-providers></div>
+        <div class="provider-row" data-providers></div>
+      </div>
+      <div class="marquee is-reverse">
+        <ul class="model-row" data-models></ul>
+        <ul class="model-row" data-models aria-hidden="true"></ul>
+      </div>
+    </section>
+
+    <!-- ================= 5. POCKET ================= -->
+    <section class="section" id="pocket" aria-labelledby="pocket-title">
+      <div class="container reveal-group">
+        <h2 class="section-title is-center reveal" id="pocket-title" style="--i:0">KITE OS in your pocket.</h2>
+        <p class="body-lg center-lede reveal" style="--i:1">remembered something on the way out? press the button, say what needs doing and set it in motion. k1 is a direct line to KITE OS, without opening another app.</p>
+        <figure class="figure is-bleed is-pocket reveal" style="--i:2">
+          <img src="assets/k1.svg" alt="the KITE k1 handheld listening to a spoken request" width="1600" height="900" loading="lazy">
+        </figure>
+        <div class="center-cta reveal" style="--i:3">
+          <button class="text-arrow size-24" type="button" data-open-modal="product">explore KITE k1 <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. FAQ ================= -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container reveal-group">
+        <h2 class="section-title faq-title reveal" id="faq-title" style="--i:0">KITE OS questions.</h2>
+        <div class="faq-list reveal" style="--i:1" data-faq></div>
+        <div class="faq-more reveal" style="--i:2"><a href="legal.html#support">read the full KITE OS help page</a></div>
+      </div>
+    </section>
+
+    <!-- ================= 7. FINAL CTA ================= -->
+    <section class="section final" aria-labelledby="final-title">
+      <div class="container reveal-group">
+        <h2 class="final-title reveal" id="final-title" style="--i:0">start with something you care about.</h2>
+        <p class="body-lg final-lede reveal" style="--i:1">a chore you keep postponing. an idea you haven't had time to try. tell KITE OS what you have in mind.</p>
+        <div class="final-actions reveal" style="--i:2">
+          <a class="pill final-cta" href="account.html">
+            <span>try KITE OS</span>
+            <svg class="pill-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg>
+          </a>
+          <button class="text-arrow is-light" type="button" data-open-modal="film" style="font-size:20px">watch the launch <span class="arrow">→</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a class="glow-text" href="https://x.com" target="_blank" rel="noopener noreferrer" title="X (demo link)" aria-label="X (opens x.com)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>
+      </a>
+      <a class="glow-text" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram (demo link)" aria-label="Instagram (opens instagram.com)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a class="glow-text" href="legal.html#support" title="Community &amp; support" aria-label="Community and support">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v10H9l-5 4V5Z"/></svg>
+      </a>
+    </div>
+    <hr>
+    <div class="footer-links">
+      <a class="glow-text" href="legal.html#track">track my k1 order</a>
+      <a class="glow-text" href="legal.html#terms">terms</a>
+      <a class="glow-text" href="legal.html#privacy">privacy policy</a>
+      <a class="glow-text" href="legal.html#warranty">warranty &amp; return</a>
+    </div>
+    <hr>
+    <div>KITE inc. © <span data-year>2026</span> · demo project</div>
+  </footer>
+
+  <!-- ================= MODALS ================= -->
+  <div class="modal" id="modal-film" role="dialog" aria-modal="true" aria-label="KITE OS launch film">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel is-wide">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+      <div class="film">
+        <img src="assets/hero-poster.svg" alt="">
+        <div class="film-slide">KITE OS<small>start with the idea.</small></div>
+        <div class="film-slide">say it once.<small>KITE works through the steps.</small></div>
+        <div class="film-slide">close the tab.<small>the work keeps moving.</small></div>
+        <div class="film-slide">try KITE OS<small>on the web, mac, windows and k1.</small></div>
+        <div class="film-bar"></div>
+      </div>
+      <p class="film-caption">launch film · a 16-second animated preview built for this demo site</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-download" role="dialog" aria-modal="true" aria-labelledby="download-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+      <h2 class="modal-title" id="download-title">almost there.</h2>
+      <p class="modal-text">the <strong data-platform-name>desktop</strong> build of KITE OS isn't included in this demo site, so there's no file to download. you can open the web workspace preview instead.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="account.html">open KITE OS on the web</a>
+        <button class="btn btn-ghost" type="button" data-close-modal>close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-product" role="dialog" aria-modal="true" aria-labelledby="product-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel is-product">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+      <div class="product">
+        <img src="assets/k1.svg" alt="KITE k1 handheld" width="1600" height="900">
+        <div>
+          <h2 class="modal-title" id="product-title">KITE k1</h2>
+          <p class="product-price">$199 <span style="font-size:14px;color:var(--gray-500)">· demo price</span></p>
+          <ul class="product-specs">
+            <li>push-to-talk button and scroll wheel</li>
+            <li>2.9" touchscreen with rotating camera</li>
+            <li>direct line to KITE OS — no app to open</li>
+            <li>all-day battery, USB-C charging</li>
+          </ul>
+          <div class="swatches" role="group" aria-label="colour">
+            <button class="swatch" type="button" style="background:#f5f5f5" aria-pressed="true" data-color="white" aria-label="white"></button>
+            <button class="swatch" type="button" style="background:#5c5c5c" aria-pressed="false" data-color="graphite" aria-label="graphite"></button>
+            <button class="swatch" type="button" style="background:#0d0d0d" aria-pressed="false" data-color="black" aria-label="black"></button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-primary" type="button" data-add-to-cart>add to cart</button>
+            <button class="btn btn-ghost" type="button" data-close-modal>keep browsing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal drawer" id="modal-cart" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+      <h2 class="modal-title" id="cart-title">your cart.</h2>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-total"><span>total</span><span data-cart-total>$0</span></div>
+      <button class="btn btn-primary" type="button" data-checkout>checkout</button>
+      <p class="demo-note">demo store: checkout is not connected to any payment system and no order will be placed.</p>
+    </div>
+  </div>
+
+  <div class="toast-wrap" aria-live="polite" data-toasts></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
