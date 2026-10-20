@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — KITE</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Hanken+Grotesk:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KITE home">
+        <svg class="logo-mark" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1.5 L20 9 L11 24.5 L2 9 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 1.5 V24.5 M2 9 H20" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo-word">KITE</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a class="nav-link" href="index.html"><span class="badge-new">new</span>KITE OS</a>
+        <a class="nav-link" href="index.html#pocket">k1</a>
+        <a class="nav-link" href="index.html#memory">memory</a>
+        <a class="nav-link" href="index.html#anywhere">anywhere</a>
+        <a class="nav-link" href="index.html#models">models</a>
+        <a class="nav-link" href="index.html#faq">support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-account" href="signup.html" data-keep-label>create account</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html"><span><span class="badge-new">new</span>KITE OS</span></a>
+    <a href="index.html#pocket"><span>k1</span></a>
+    <a href="index.html#memory"><span>memory</span></a>
+    <a href="index.html#anywhere"><span>anywhere</span></a>
+    <a href="index.html#models"><span>models</span></a>
+    <a href="index.html#faq"><span>support</span></a>
+    <a class="mobile-account" href="signup.html" data-keep-label><span>create account</span></a>
+  </nav>
+
+  <main class="auth-main" id="main">
+    <aside class="auth-aside">
+      <div>
+        <h1 class="auth-aside-title">welcome back.</h1>
+        <p class="auth-aside-text">pick up where you left off. your KITE OS workspace is one sign-in away.</p>
+      </div>
+      <div class="auth-art"><img src="assets/laptop.svg" alt="KITE OS on a laptop, continuing a task in the background" width="1600" height="900"></div>
+      <ul class="auth-perks">
+        <li>memory that carries into the next request</li>
+        <li>long tasks keep running after you close the tab</li>
+      </ul>
+    </aside>
+
+    <section class="auth-panel" aria-labelledby="signin-title">
+      <div class="auth-card">
+        <p class="auth-eyebrow">KITE account</p>
+        <h2 class="auth-title" id="signin-title">sign in</h2>
+        <p class="auth-sub">new to KITE? <a href="signup.html">create an account</a></p>
+
+        <div class="alert" role="alert" data-alert></div>
+
+        <form class="form" id="signin-form" novalidate>
+          <div class="field">
+            <label class="label" for="email">email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-error" required>
+            <p class="field-error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label class="label" for="password">password</label>
+              <button class="link-btn" type="button" data-open-modal="forgot">forgot password?</button>
+            </div>
+            <div class="input-wrap">
+              <input class="input has-toggle" id="password" name="password" type="password" autocomplete="current-password" placeholder="your password" aria-describedby="password-error" required>
+              <button class="toggle-pw" type="button" aria-controls="password" aria-pressed="false" data-toggle-password>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>show</span>
+              </button>
+            </div>
+            <p class="field-error" id="password-error"></p>
+          </div>
+
+          <button class="btn-submit" type="submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span data-submit-label>sign in</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+
+        </form>
+
+        <p class="auth-switch">don't have an account? <a href="signup.html">sign up</a></p>
+        <p class="auth-back"><a href="index.html">← back to KITE home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a class="glow-text" href="legal.html#support" aria-label="Community and support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v10H9l-5 4V5Z"/></svg></a>
+    </div>
+    <hr>
+    <div class="footer-links">
+      <a class="glow-text" href="legal.html#track">track my k1 order</a>
+      <a class="glow-text" href="legal.html#terms">terms</a>
+      <a class="glow-text" href="legal.html#privacy">privacy policy</a>
+      <a class="glow-text" href="legal.html#warranty">warranty &amp; return</a>
+    </div>
+    <hr>
+    <div>KITE inc. © <span data-year>2026</span> · demo project</div>
+  </footer>
+
+  <div class="modal" id="modal-forgot" role="dialog" aria-modal="true" aria-labelledby="forgot-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel is-light">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+      <h2 class="modal-title" id="forgot-title">reset password.</h2>
+      <p class="modal-text">password reset isn't connected yet in this frontend preview, so no email will be sent.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="signup.html">create an account</a>
+        <button class="btn btn-ghost" type="button" data-close-modal>back to sign in</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-wrap" aria-live="polite" data-toasts></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
