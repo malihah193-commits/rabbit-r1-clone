@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 755" role="img" aria-label="The KITE OS workspace: one conversation working through a task step by step">
+  <style>
+    text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    .step { opacity: .25; animation: step 9s infinite; }
+    .s2 { animation-delay: 1.5s; } .s3 { animation-delay: 3s; } .s4 { animation-delay: 4.5s; }
+    @keyframes step { 0%, 4% { opacity: .25; } 10%, 88% { opacity: 1; } 100% { opacity: .25; } }
+    .bar { animation: grow 9s infinite; transform-box: fill-box; transform-origin: left; }
+    @keyframes grow { 0% { transform: scaleX(.05); } 60%, 88% { transform: scaleX(1); } 100% { transform: scaleX(.05); } }
+    .row { opacity: 0; animation: row 9s infinite; }
+    .r2 { animation-delay: .4s; } .r3 { animation-delay: .8s; } .r4 { animation-delay: 1.2s; } .r5 { animation-delay: 1.6s; }
+    @keyframes row { 0%, 30% { opacity: 0; } 40%, 88% { opacity: 1; } 100% { opacity: 0; } }
+    .caret { animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0a0a0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="755" fill="url(#bg)"/>
+
+  <!-- window -->
+  <rect x="40" y="40" width="1120" height="675" rx="16" fill="#101112" stroke="#2e2e2e"/>
+  <circle cx="72" cy="70" r="7" fill="#ffffff"/><circle cx="96" cy="70" r="7" fill="#4a4a4a"/><circle cx="120" cy="70" r="7" fill="#4a4a4a"/>
+  <text x="600" y="76" text-anchor="middle" font-size="15" fill="#868686">KITE OS</text>
+  <line x1="40" y1="100" x2="1160" y2="100" stroke="#2e2e2e"/>
+
+  <!-- sidebar -->
+  <rect x="40" y="100" width="230" height="615" fill="#0c0d0e"/>
+  <line x1="270" y1="100" x2="270" y2="715" stroke="#2e2e2e"/>
+  <rect x="60" y="122" width="190" height="38" rx="10" fill="#ffffff"/>
+  <text x="155" y="147" text-anchor="middle" font-size="15" fill="#131516">+ new thought</text>
+  <g font-size="14" fill="#b5b5b5">
+    <text x="64" y="196" fill="#868686" font-size="12">today</text>
+    <rect x="56" y="208" width="198" height="34" rx="8" fill="#1d1d1d"/>
+    <text x="70" y="230" fill="#ebe8e2">expense report · march</text>
+    <text x="70" y="270">lisbon weekend</text>
+    <text x="70" y="304">laptop comparison</text>
+    <text x="64" y="350" fill="#868686" font-size="12">connected</text>
+    <circle cx="74" cy="376" r="5" fill="#3ddc84"/><text x="88" y="381">home desktop</text>
+    <circle cx="74" cy="406" r="5" fill="#3ddc84"/><text x="88" y="411">work laptop</text>
+    <circle cx="74" cy="436" r="5" fill="#4a4a4a"/><text x="88" y="441">k1</text>
+  </g>
+
+  <!-- conversation -->
+  <g font-size="16">
+    <rect x="470" y="128" width="420" height="52" rx="18" fill="#ffffff"/>
+    <text x="490" y="160" fill="#131516">turn these 40 receipts into an expense report</text>
+
+    <text x="304" y="226" fill="#ffffff" font-size="13">KITE</text>
+    <text x="304" y="252" fill="#ebe8e2">on it. I'll check in before anything is sent.</text>
+
+    <g class="step s1"><circle cx="314" cy="290" r="9" fill="#ffffff"/><path d="M309 290 l4 4 l7 -8" stroke="#131516" stroke-width="2.4" fill="none"/>
+      <text x="334" y="296" fill="#ebe8e2">read 40 receipts from /downloads/march</text></g>
+    <g class="step s2"><circle cx="314" cy="330" r="9" fill="#ffffff"/><path d="M309 330 l4 4 l7 -8" stroke="#131516" stroke-width="2.4" fill="none"/>
+      <text x="334" y="336" fill="#ebe8e2">extract dates, vendors and totals</text></g>
+    <g class="step s3"><circle cx="314" cy="370" r="9" fill="#ffffff"/><path d="M309 370 l4 4 l7 -8" stroke="#131516" stroke-width="2.4" fill="none"/>
+      <text x="334" y="376" fill="#ebe8e2">build the spreadsheet by category</text></g>
+    <g class="step s4"><circle cx="314" cy="410" r="9" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <text x="334" y="416" fill="#ebe8e2">draft email to finance — waiting for you</text></g>
+
+    <rect x="304" y="446" width="360" height="6" rx="3" fill="#2e2e2e"/>
+    <rect class="bar" x="304" y="446" width="360" height="6" rx="3" fill="#ffffff"/>
+  </g>
+
+  <!-- spreadsheet preview -->
+  <g transform="translate(720 210)">
+    <rect width="410" height="260" rx="12" fill="#151718" stroke="#2e2e2e"/>
+    <text x="20" y="34" font-size="15" fill="#ebe8e2">march_expenses.xlsx</text>
+    <line x1="0" y1="52" x2="410" y2="52" stroke="#2e2e2e"/>
+    <g font-size="13" fill="#868686"><text x="20" y="78">vendor</text><text x="190" y="78">category</text><text x="330" y="78">total</text></g>
+    <g font-size="14" fill="#ebe8e2">
+      <g class="row r1"><text x="20" y="110">city cabs</text><text x="190" y="110">travel</text><text x="330" y="110">$46.20</text></g>
+      <g class="row r2"><text x="20" y="140">blue bottle</text><text x="190" y="140">meals</text><text x="330" y="140">$18.75</text></g>
+      <g class="row r3"><text x="20" y="170">harbor hotel</text><text x="190" y="170">lodging</text><text x="330" y="170">$412.00</text></g>
+      <g class="row r4"><text x="20" y="200">office depot</text><text x="190" y="200">supplies</text><text x="330" y="200">$63.40</text></g>
+      <g class="row r5"><text x="20" y="236" fill="#ffffff">total · 40 items</text><text x="330" y="236" fill="#ffffff">$2,184.55</text></g>
+    </g>
+  </g>
+
+  <!-- input -->
+  <rect x="300" y="620" width="830" height="60" rx="30" fill="#151718" stroke="#2e2e2e"/>
+  <text x="330" y="657" font-size="16" fill="#868686">say what you want to make, find or finish</text>
+  <rect class="caret" x="635" y="638" width="2" height="24" fill="#ffffff"/>
+  <circle cx="1098" cy="650" r="20" fill="#ffffff"/>
+  <path d="M1090 650 h14 m-6 -6 l6 6 l-6 6" stroke="#131516" stroke-width="2.4" fill="none"/>
+</svg>

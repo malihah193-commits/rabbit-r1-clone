@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Three connected computers and a KITE k1, all linked to KITE OS">
+  <style>
+    text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    .flow { stroke-dasharray: 4 10; animation: flow 1.6s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+  </style>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0" stop-color="#242424"/><stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c7c7c7"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3b3e"/><stop offset="1" stop-color="#1c1d1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- connection lines to hub -->
+  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity=".7">
+    <path class="flow" d="M800 170 C 520 170, 400 260, 360 360"/>
+    <path class="flow" d="M800 248 V 300"/>
+    <path class="flow" d="M800 170 C 1080 170, 1200 260, 1250 400"/>
+  </g>
+  <!-- hub -->
+  <g transform="translate(800 150)">
+    <circle r="54" fill="#ffffff" opacity=".15"/>
+    <circle r="34" fill="#131516" stroke="#ffffff" stroke-width="2"/>
+    <path d="M0 -20 L15 -5 L0 22 L-15 -5 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    <text y="84" text-anchor="middle" font-size="18" fill="#ebe8e2">KITE OS</text>
+  </g>
+
+  <!-- left: laptop -->
+  <g transform="translate(170 360)">
+    <rect width="380" height="240" rx="12" fill="url(#metal)"/>
+    <rect x="12" y="12" width="356" height="216" rx="6" fill="#0e0f10"/>
+    <rect x="30" y="34" width="180" height="10" rx="5" fill="#ffffff"/>
+    <rect x="30" y="60" width="300" height="8" rx="4" fill="#4a4a4a"/><rect x="30" y="80" width="250" height="8" rx="4" fill="#4a4a4a"/>
+    <rect x="30" y="110" width="320" height="96" rx="8" fill="#1a1a1a" stroke="#5a5a5a"/>
+    <path d="M-30 240 H410 L430 262 H-50 Z" fill="#2a2b2e"/>
+    <text x="190" y="304" text-anchor="middle" font-size="18" fill="#b5b5b5">work laptop</text>
+  </g>
+
+  <!-- center: desktop monitor -->
+  <g transform="translate(560 300)">
+    <rect width="480" height="300" rx="14" fill="url(#metal)"/>
+    <rect x="14" y="14" width="452" height="272" rx="6" fill="#0e0f10"/>
+    <g transform="translate(40 44)">
+      <rect width="120" height="80" rx="8" fill="#ffffff" opacity=".85"/>
+      <rect x="140" width="120" height="80" rx="8" fill="#2e2e2e"/>
+      <rect x="280" width="120" height="80" rx="8" fill="#2e2e2e"/>
+      <rect y="100" width="120" height="80" rx="8" fill="#2e2e2e"/>
+      <rect x="140" y="100" width="120" height="80" rx="8" fill="#7a7a7a"/>
+      <rect x="280" y="100" width="120" height="80" rx="8" fill="#2e2e2e"/>
+    </g>
+    <rect x="210" y="300" width="60" height="70" fill="#2a2b2e"/>
+    <rect x="150" y="366" width="180" height="14" rx="7" fill="#3a3b3e"/>
+    <text x="240" y="418" text-anchor="middle" font-size="18" fill="#b5b5b5">home desktop</text>
+  </g>
+
+  <!-- right: mini pc / tablet -->
+  <g transform="translate(1110 400)">
+    <rect width="290" height="200" rx="16" fill="url(#metal)"/>
+    <rect x="12" y="12" width="266" height="176" rx="8" fill="#0e0f10"/>
+    <rect x="30" y="34" width="120" height="10" rx="5" fill="#ffffff"/>
+    <rect x="30" y="60" width="220" height="8" rx="4" fill="#4a4a4a"/>
+    <rect x="30" y="80" width="190" height="8" rx="4" fill="#4a4a4a"/>
+    <rect x="30" y="110" width="230" height="56" rx="8" fill="#151718" stroke="#2e2e2e"/>
+    <text x="145" y="244" text-anchor="middle" font-size="18" fill="#b5b5b5">studio mac</text>
+  </g>
+
+  <!-- front: k1 -->
+  <g transform="translate(800 690) rotate(-6) translate(-90 -90)">
+    <ellipse cx="90" cy="196" rx="110" ry="14" fill="#000" opacity=".6"/>
+    <rect width="180" height="180" rx="28" fill="url(#red)"/>
+    <rect x="14" y="24" width="116" height="116" rx="12" fill="#0a0a0a"/>
+    <path d="M72 50 L92 70 L72 112 L52 70 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="140" y="24" width="28" height="62" rx="14" fill="#1a1a1a"/>
+    <circle cx="154" cy="44" r="8" fill="#060606"/>
+    <rect x="143" y="96" width="22" height="58" rx="11" fill="#9b9b9b"/>
+  </g>
+  <text x="800" y="880" text-anchor="middle" font-size="18" fill="#b5b5b5">k1</text>
+</svg>

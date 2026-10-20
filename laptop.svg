@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="KITE OS running on a laptop, continuing a task in the background">
+  <style>
+    text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b1b1b"/><stop offset=".7" stop-color="#0b0b0b"/><stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="alu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3b3e"/><stop offset="1" stop-color="#1c1d1f"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a4b4f"/><stop offset="1" stop-color="#1d1e20"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="420" rx="700" ry="360" fill="url(#glow)"/>
+  <!-- desk -->
+  <rect y="760" width="1600" height="140" fill="#0a0a0a"/>
+  <line x1="0" y1="760" x2="1600" y2="760" stroke="#2a2a2a"/>
+
+  <!-- laptop lid -->
+  <rect x="380" y="140" width="840" height="560" rx="22" fill="url(#alu)"/>
+  <rect x="400" y="160" width="800" height="520" rx="10" fill="#0e0f10"/>
+  <!-- screen UI -->
+  <rect x="400" y="160" width="800" height="40" rx="10" fill="#151617"/>
+  <circle cx="424" cy="180" r="6" fill="#ffffff"/><circle cx="444" cy="180" r="6" fill="#4a4a4a"/><circle cx="464" cy="180" r="6" fill="#4a4a4a"/>
+  <text x="800" y="186" text-anchor="middle" font-size="14" fill="#868686">KITE OS</text>
+
+  <g font-size="17">
+    <rect x="760" y="226" width="400" height="44" rx="16" fill="#ffffff"/>
+    <text x="780" y="254" fill="#131516">same format as last month's report, please</text>
+    <text x="440" y="306" fill="#ffffff" font-size="13">KITE · remembered from feb 28</text>
+    <text x="440" y="334" fill="#ebe8e2">using your template, finance@ as recipient, and EUR totals.</text>
+    <rect x="440" y="360" width="720" height="150" rx="14" fill="#151718" stroke="#2e2e2e"/>
+    <text x="464" y="394" fill="#b5b5b5" font-size="14">long task · running in the background</text>
+    <g font-size="15" fill="#ebe8e2">
+      <circle cx="472" cy="424" r="7" fill="#ffffff"/><text x="490" y="429">collected 112 invoices</text>
+      <circle cx="472" cy="454" r="7" fill="#ffffff"/><text x="490" y="459">matched to bank statement</text>
+      <circle cx="472" cy="484" r="7" fill="none" stroke="#ffffff" stroke-width="2"/><text x="490" y="489" fill="#868686">reconciling 3 mismatches…</text>
+    </g>
+    <rect x="440" y="540" width="720" height="110" rx="14" fill="#1a1a1a" stroke="#5a5a5a"/>
+    <text x="464" y="578" fill="#ebe8e2">you can close this tab. I'll message you on k1 when it's ready.</text>
+    <rect x="464" y="598" width="140" height="34" rx="17" fill="#ffffff"/>
+    <text x="534" y="620" text-anchor="middle" font-size="14" fill="#131516">notify me</text>
+    <rect x="616" y="598" width="140" height="34" rx="17" fill="none" stroke="#4a4a4a"/>
+    <text x="686" y="620" text-anchor="middle" font-size="14" fill="#ebe8e2">watch live</text>
+  </g>
+
+  <!-- base -->
+  <path d="M300 700 H1300 L1340 742 Q1342 752 1330 754 H270 Q258 752 260 742 Z" fill="url(#base)"/>
+  <rect x="720" y="700" width="160" height="10" rx="5" fill="#141516"/>
+
+  <!-- status chip -->
+  <g transform="translate(1240 96)">
+    <rect width="260" height="52" rx="26" fill="#131516" stroke="#ffffff" stroke-opacity=".5"/>
+    <circle class="pulse" cx="34" cy="26" r="7" fill="#ffffff"/>
+    <text x="54" y="33" font-size="17" fill="#ebe8e2">still working · step 5 of 7</text>
+  </g>
+</svg>

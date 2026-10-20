@@ -10,8 +10,10 @@
   --accent-strong: #ffffff;     /* emphasis on dark surfaces */
   --accent-muted: #9a9a9a;      /* secondary accent / link hover */
   --surface-tint: #161616;      /* image wells, product backgrounds */
-  --header-bg: #000000;         /* header bar */
-  --header-line: #1f1f1f;       /* hairline under the header */
+  --header-bg: #15151f;         /* header bar: deep graphite with a blue-violet tint */
+  --header-bg-top: #1b1b28;     /* top of the header's soft gradient */
+  --header-line: rgba(160, 160, 255, .14); /* hairline under the header */
+  --nav-hover: rgba(165, 165, 255, .12);   /* nav link hover wash */
 
   /* neutrals */
   --ink: #0a0a0a;               /* near-black text on white */
@@ -113,9 +115,10 @@ main, footer { position: relative; z-index: 1; }
   height: var(--header-h);
   padding: 16px;
   display: flex; justify-content: center;
-  background: var(--header-bg);
-  color: var(--paper);
+  background: linear-gradient(180deg, var(--header-bg-top), var(--header-bg));
+  color: var(--gray-100);
   border-bottom: 1px solid var(--header-line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
   font-family: var(--font-display);
   font-size: 14px; line-height: 24px; font-weight: 400; letter-spacing: .4px;
 }
@@ -141,8 +144,8 @@ main, footer { position: relative; z-index: 1; }
 }
 .nav-link:hover, .nav-link:focus-visible {
   color: var(--white);
-  background-color: rgba(255, 255, 255, .1);
-  box-shadow: 0 0 24px rgba(255, 255, 255, .14), inset 0 1px 0 rgba(255,255,255,.22);
+  background-color: var(--nav-hover);
+  box-shadow: 0 0 22px rgba(150, 150, 255, .16), inset 0 1px 0 rgba(255,255,255,.14);
   outline: none;
 }
 .badge-new {
@@ -158,7 +161,7 @@ main, footer { position: relative; z-index: 1; }
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 9px; transition: background-color .32s var(--ease);
 }
-.icon-btn:hover { background-color: rgba(255, 255, 255, .1); }
+.icon-btn:hover { background-color: var(--nav-hover); }
 .icon-btn svg { width: 24px; height: 24px; }
 .cart-count {
   position: absolute; top: 2px; right: 0;
