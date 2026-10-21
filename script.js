@@ -111,36 +111,10 @@
     });
   }
 
-  /* ---------- FAQ accordion ---------- */
-  var FAQ = [
-    ["what is KITE OS?", "KITE OS is an AI operating layer that starts from what you want done. you describe the outcome, and it plans and carries out the steps across the web, your connected computers and your apps, checking with you when a decision is yours to make."],
-    ["do I need a perfect prompt?", "no. say it the way you'd say it to a colleague, even if the idea isn't finished. KITE asks follow-up questions when something important is missing."],
-    ["how do I talk to KITE OS?", "type or speak in the web app, message it from your chat apps, or press the button on k1. it's the same assistant and the same memory everywhere."],
-    ["why bring your own key?", "it lets you choose which model powers KITE OS and switch later without losing your memory, skills or connected computers. you pay the model provider directly."],
-    ["which providers can I use?", "major hosted providers, routers like OpenRouter, local runtimes like Ollama, or any compatible endpoint you run yourself."],
-    ["do all API keys cost money?", "it depends on the provider. some offer free tiers, and local models running on your own hardware don't charge per request at all."],
-    ["can KITE OS use more than one computer?", "yes. connect as many as you like and tell KITE which one a task should run on, or let it pick the one that has the files."],
-    ["does connecting a computer upload my files?", "no. files stay on your computer. KITE reads or changes only what a task needs, and you can disconnect a computer at any time."],
-    ["when does KITE OS ask before doing something?", "before anything that sends, buys, deletes or shares on your behalf. you can make it more or less cautious in settings."],
-    ["can I close the tab while KITE OS is working?", "yes. long tasks keep running in the background and KITE lets you know when they're finished or need you."],
-    ["can KITE OS use my other apps?", "where there's an integration it uses it directly. where there isn't, it can operate the app's interface on a connected computer, the way you would."],
-    ["do I need k1?", "no. k1 is an optional shortcut: a pocket device with a push-to-talk button. everything KITE OS does works on the web and desktop too."],
-    ["is this a real product?", "this website is a frontend design demo. KITE, KITE OS and k1 are fictional, accounts are real but the AI isn't connected yet, and nothing can actually be purchased."]
-  ];
-
+  /* ---------- FAQ accordion (questions and answers live in index.html) ---------- */
   function initFaq() {
     var list = document.querySelector("[data-faq]");
     if (!list) return;
-    list.innerHTML = FAQ.map(function (item, i) {
-      return (
-        '<div class="faq-item">' +
-          '<h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-' + i + '" id="faq-q-' + i + '">' +
-            "<span>" + item[0] + '</span><span class="faq-icon" aria-hidden="true"></span>' +
-          "</button></h3>" +
-          '<div class="faq-a" id="faq-a-' + i + '" role="region" aria-labelledby="faq-q-' + i + '"><div><p>' + item[1] + "</p></div></div>" +
-        "</div>"
-      );
-    }).join("");
 
     list.addEventListener("click", function (e) {
       var btn = e.target.closest(".faq-q");
